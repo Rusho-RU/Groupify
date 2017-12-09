@@ -83,7 +83,7 @@ public class Client {
     }
 
     public static void main(String[] args){
-        int portNumber = 1500;
+        int portNumber = 1530;
         String serverAddress = "localhost";
         String userName = "Rusho";
 
@@ -116,9 +116,8 @@ public class Client {
                 break;
             }
 
-            else if(msg.equalsIgnoreCase("WHOISIN")){
+            else if(msg.equalsIgnoreCase("WHOISIN"))
                 client.sendMessage(new ChatMessage(ChatMessage.WHOISIN, ""));
-            }
 
             else
                 client.sendMessage(new ChatMessage(ChatMessage.MESSAGE ,msg));
@@ -134,7 +133,6 @@ public class Client {
                     String msg = (String) sInput.readObject();
                     System.out.print(msg + "\n> ");
                 }catch (Exception e){
-                    e.printStackTrace();
                     break;
                 }
             }

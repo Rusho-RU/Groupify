@@ -33,6 +33,8 @@ public class Server {
                 ClientThread t = new ClientThread(socket);
                 al.add(t);
                 t.start();
+                if(al.isEmpty())
+                    stop();
             }
 
             try{
@@ -92,7 +94,7 @@ public class Server {
     }
 
     public static void main(String[] args){
-        int portNumber = 1500;
+        int portNumber = 1530;
 
         switch (args.length){
             case 1:
