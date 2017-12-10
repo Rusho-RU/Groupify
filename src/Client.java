@@ -1,5 +1,3 @@
-import jdk.nashorn.internal.runtime.ECMAErrors;
-
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -84,7 +82,7 @@ public class Client {
 
     public static void main(String[] args){
         int portNumber = 1530;
-        String serverAddress = "localhost";
+        String serverAddress = "192.168.0.107";
         String userName = "Rusho";
 
         switch (args.length){
